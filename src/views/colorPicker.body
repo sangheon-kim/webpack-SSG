@@ -1,0 +1,73 @@
+<button class="add-color">+</button>
+<div class="wrapper">
+  <canvas class="circle" id="circle" width="250" height="250"></canvas>
+  <div class="color-circle">
+    <div class="point" id="point"></div>
+  </div>
+  <div class="brightness-board"></div>
+  <div class="form">
+    <label for="hue">HUE (색조)</label>
+    <input
+      type="range"
+      id="hue-range"
+      name="hue"
+      value="0"
+      min="0"
+      max="359"
+      step="1"
+    />
+    <input type="number" name="hue" value="0" id="hue-input" /><span>
+      °</span
+    >
+  </div>
+  <div class="form">
+    <label for="saturation">Saturation (채도)</label>
+    <input
+      type="range"
+      id="saturation-range"
+      name="saturation"
+      value="100"
+      min="0"
+      max="100"
+      step="0.1"
+    />
+    <input
+      type="number"
+      name="saturation"
+      value="100"
+      id="saturation-input"
+    /><span>%</span>
+  </div>
+  <div class="form" style="visibility: hidden;">
+    <label for="lightness">Lightness (밝기)</label>
+    <input
+      type="range"
+      id="lightness-range"
+      name="lightness"
+      value="50"
+      min="0"
+      max="100"
+      step="1"
+    />
+    <input
+      type="number"
+      name="lightness"
+      value="50"
+      id="lightness-input"
+      max="100"
+    /><span>%</span>
+  </div>
+  <div class="lightness-change">
+    <div class="stick"></div>
+    <canvas class="lightness-canvas" id="lightness" width="300" height="20"></canvas>
+  </div>
+  <div class="result">
+    <div class="result-board" id="0">
+      <div class="color-board selected"></div>
+      <div class="result-title">
+        <input type="text" value="0" name="rgb_value" readonly="true" class="rgb_value"/>
+        <input type="text" name="text" value="0" class="hex-input" readonly="true"/>
+      </div>
+    </div>
+  </div>
+</div>
